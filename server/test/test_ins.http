@@ -1,0 +1,30 @@
+
+//leer datos
+###
+GET http://localhost:9000/rt_ins HTTP/1.1
+
+//leer con filtro datos
+###
+GET http://localhost:9000/rt_ins/2 HTTP/1.1
+
+//crear un dato
+###
+POST http://localhost:9000/rt_ins HTTP/1.1
+Content-Type: application/json
+ {
+    "ins_id": 3,
+    "ins_name": "Bateria",
+    "ins_category": "Percusión",
+    "ins_description": "Instrumento infantil"
+  }
+
+  //actualizar un dato
+###
+PUT http://localhost:9000/rt_ins/2 HTTP/1.1
+Content-Type: application/json
+ {
+    "ins_id": 2,
+    "ins_name": "Bajo electrico",
+    "ins_category": "Cuerdas",
+    "ins_description": "Instrumento infantil"
+  }
